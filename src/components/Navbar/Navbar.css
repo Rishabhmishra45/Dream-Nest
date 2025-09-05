@@ -226,35 +226,43 @@
         flex-shrink: 0;
         scrollbar-width: none;
     }
-    .search input{
+
+    .search input {
         width: 180px;
         font-size: 15px;
     }
-    .search button span{
+
+    .search button span {
         display: none;
     }
-    .search{
+
+    .search {
         gap: 20px;
     }
 }
 
-@media (max-width:500px){
-    #btn2{
+@media (max-width:500px) {
+    #btn2 {
         border: none;
         padding: 0;
     }
-    #svg2{
+
+    #svg2 {
         display: none;
     }
-    #svg1{
+
+    #svg1 {
         width: 25px;
         height: 25px;
         fill: black;
     }
 }
 
-@media (min-width:500px){
-    .search input {
-        margin-left: 20px;
+@media (max-width:500px) {
+    .search input{
+        margin-right: 30px;
+    }
+    .search button{
+        margin-left: -30px;
     }
 }
