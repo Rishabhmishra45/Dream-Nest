@@ -242,6 +242,17 @@
 }
 
 @media (max-width:500px) {
+    #favicon {
+        margin-left: 0px;
+        margin-top: 5px;
+        height: 75px;
+        width: 75px;
+    }
+
+    .search {
+        margin-right: 15px;
+    }
+
     #btn2 {
         border: none;
         padding: 0;
@@ -255,14 +266,10 @@
         width: 25px;
         height: 25px;
         fill: black;
+        margin-right: 5px;
     }
-}
 
-@media (max-width:500px) {
-    .search input{
-        margin-right: 30px;
-    }
-    .search button{
-        margin-left: -30px;
+    #svg1:hover{
+        color: black;
     }
 }

@@ -7,4 +7,8 @@ export default defineConfig({
   build: {
     outDir: "dist",  // Vercel automatically expects dist
   },
+  server: {
+    host: '0.0.0.0', // phone से access करने के लिए
+    port: 5173
+  }
 })
