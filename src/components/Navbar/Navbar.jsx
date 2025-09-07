@@ -14,6 +14,7 @@ import { GiWoodCabin } from "react-icons/gi";
 import { GiShop } from "react-icons/gi";
 import { GiForestCamp } from "react-icons/gi";
 import { Link, NavLink } from 'react-router-dom';
+import { RxCross2 } from "react-icons/rx";   // ⬅️ Cross icon import
 
 const Navbar = () => {
     let [visible, setvisible] = useState(false)
@@ -35,11 +36,10 @@ const Navbar = () => {
                     </Link>
                     <div className="ham1">Help center</div>
                 </div>
-            ) : <div></div>}
+            ) : null}
 
             {/* ========== TOP NAVBAR (LOGO + SEARCH + BUTTONS) ========== */}
             <div className='nav1'>
-
                 {/* ---- LOGO ---- */}
                 <Link to={""}>
                     <div className="logo">
@@ -56,29 +56,35 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                {/* ---- RIGHT SIDE BUTTONS (List Home + Hamburger/Profile) ---- */}
+                {/* ---- RIGHT SIDE BUTTONS ---- */}
                 <div className='ham'>
                     <Link to={"/Listing"}>
                         <button id='btn1'>List Your Home</button>
                     </Link>
+
                     <button id='btn2' onClick={() => setvisible(prev => !prev)}>
-                        <GiHamburgerMenu id='svg1' />
-                        <CgProfile id='svg2' />
+                        {visible ? (
+                            // Agar menu open hai to CROSS dikhana hai
+                            <RxCross2 id='svgCross' />
+                        ) : (
+                            // Agar menu band hai to hamburger + profile dikhana hai
+                            <>
+                                <GiHamburgerMenu id='svg1' />
+                                <CgProfile id='svg2' />
+                            </>
+                        )}
                     </button>
                 </div>
             </div>
 
             {/* ========== SECOND NAVBAR (CATEGORIES) ========== */}
             <div className='nav2'>
-                {/* Trending with NavLink (active highlight support) */}
                 <NavLink to={""}>
                     <div className="svg11">
                         <MdOutlineWhatshot />
                         <h3>Trending</h3>
                     </div>
                 </NavLink>
-
-                {/* Other Categories */}
                 <div className="svg11"><GiFamilyHouse /><h3>Houses</h3></div>
                 <div className="svg11"><MdBedroomParent /><h3>Rooms</h3></div>
                 <div className="svg11"><PiFarm /><h3>Farm Houses</h3></div>
