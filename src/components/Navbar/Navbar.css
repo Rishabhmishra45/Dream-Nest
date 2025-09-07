@@ -199,6 +199,12 @@
     background-color: rgba(232, 230, 230, 0.844);
 }
 
+a.active {
+    border-bottom: 2px solid rgb(95, 94, 94);
+    margin-bottom: 5px;
+}
+
+
 @media (max-width:900px) {
     #btn1 {
         display: none;
@@ -267,9 +273,5 @@
         height: 25px;
         fill: black;
         margin-right: 5px;
-    }
-
-    #svg1:hover{
-        color: black;
     }
 }

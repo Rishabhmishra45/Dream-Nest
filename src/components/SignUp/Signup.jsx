@@ -3,32 +3,43 @@ import './Signup.css'
 import { LuUserRoundPlus } from "react-icons/lu";
 
 const Signup = () => {
-    return (
-        <div id='signup' onSubmit={
-            alert("Sign Up Successfully...")
-        }>
-            <form action="">
-                <span id='signuptitle'>SignUp Page</span>
-                <div className="list">
-                    <label htmlFor="text">Full Name</label>
-                    <input type="text" id='text' required />
-                </div>
-                <div className="list">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id='email' required />
-                </div>
-                <div className="list">
-                    <label htmlFor="pass">Password</label>
-                    <input type="password" id='pass' required />
-                </div>
-                <div className="list">
-                    <label htmlFor="pass">Confirm Password</label>
-                    <input type="password" id='pass' required />
-                </div>
-                <button id="loginbtn">Sign Up <LuUserRoundPlus /></button>
-            </form>
-        </div>
-    )
-}
 
-export default Signup
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    alert("Sign Up Successfully...");
+  };
+
+  return (
+    <div id='signup'>
+      <form onSubmit={handleSubmit}>
+        <span id='signuptitle'>SignUp Page</span>
+
+        <div className="list">
+          <label htmlFor="fullname">Full Name</label>
+          <input type="text" id='fullname' required />
+        </div>
+
+        <div className="list">
+          <label htmlFor="email">Email</label>
+          <input type="email" id='email' required />
+        </div>
+
+        <div className="list">
+          <label htmlFor="password">Password</label>
+          <input type="password" id='password' required />
+        </div>
+
+        <div className="list">
+          <label htmlFor="confirmPass">Confirm Password</label>
+          <input type="password" id='confirmPass' required />
+        </div>
+
+        <button id="signupbtn" type="submit">
+          Sign Up <LuUserRoundPlus />
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default Signup;

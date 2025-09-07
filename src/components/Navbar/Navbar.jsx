@@ -13,41 +13,68 @@ import { LuTentTree } from "react-icons/lu";
 import { GiWoodCabin } from "react-icons/gi";
 import { GiShop } from "react-icons/gi";
 import { GiForestCamp } from "react-icons/gi";
-
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     let [visible, setvisible] = useState(false)
+
     return (
         <div id='Nav'>
-            {visible ? <div className="hamburger">
-                <div className="ham1">Login</div>
-                <div className="ham1">Sign Up</div>
-                <div className="ham1">List your home</div>
-                <div className="ham1">Help center</div>
-            </div> : <div></div>}
-            <div className='nav1'>
-                <div className="logo">
-                    <img id='favicon' src={favicon1} alt="" width="110px" />
 
+            {/* ========== HAMBURGER DROPDOWN ========== */}
+            {visible ? (
+                <div className="hamburger">
+                    <Link to={"/Login"}>
+                        <div className="ham1">Login</div>
+                    </Link>
+                    <Link to={"/Signup"}>
+                        <div className="ham1">Sign Up</div>
+                    </Link>
+                    <div className="ham1">List your home</div>
+                    <div className="ham1">Help center</div>
                 </div>
+            ) : <div></div>}
+
+            {/* ========== TOP NAVBAR (LOGO + SEARCH + BUTTONS) ========== */}
+            <div className='nav1'>
+
+                {/* ---- LOGO ---- */}
+                <Link to={""}>
+                    <div className="logo">
+                        <img id='favicon' src={favicon1} alt="" width="110px" />
+                    </div>
+                </Link>
+
+                {/* ---- SEARCH BAR ---- */}
                 <div className="search">
                     <input type="text" placeholder='Search Destination' />
-                    <button><IoSearch /><span>Search </span></button>
+                    <button>
+                        <IoSearch />
+                        <span>Search</span>
+                    </button>
                 </div>
+
+                {/* ---- RIGHT SIDE BUTTONS (List Home + Hamburger/Profile) ---- */}
                 <div className='ham'>
                     <button id='btn1'>List Your Home</button>
-                    <button id='btn2' onClick={() => {
-                        setvisible(prev => !prev)
-                    }}>
+                    <button id='btn2' onClick={() => setvisible(prev => !prev)}>
                         <GiHamburgerMenu id='svg1' />
                         <CgProfile id='svg2' />
                     </button>
                 </div>
             </div>
 
-
+            {/* ========== SECOND NAVBAR (CATEGORIES) ========== */}
             <div className='nav2'>
-                <div className="svg11"><MdOutlineWhatshot /><h3>Trending</h3></div>
+                {/* Trending with NavLink (active highlight support) */}
+                <NavLink to={""}>
+                    <div className="svg11">
+                        <MdOutlineWhatshot />
+                        <h3>Trending</h3>
+                    </div>
+                </NavLink>
+
+                {/* Other Categories */}
                 <div className="svg11"><GiFamilyHouse /><h3>Houses</h3></div>
                 <div className="svg11"><MdBedroomParent /><h3>Rooms</h3></div>
                 <div className="svg11"><PiFarm /><h3>Farm Houses</h3></div>
