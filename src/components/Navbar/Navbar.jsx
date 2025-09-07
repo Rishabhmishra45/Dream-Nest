@@ -30,7 +30,9 @@ const Navbar = () => {
                     <Link to={"/Signup"}>
                         <div className="ham1">Sign Up</div>
                     </Link>
-                    <div className="ham1">List your home</div>
+                    <Link to={"/Listing"}>
+                        <div className="ham1">List your home</div>
+                    </Link>
                     <div className="ham1">Help center</div>
                 </div>
             ) : <div></div>}
@@ -56,7 +58,9 @@ const Navbar = () => {
 
                 {/* ---- RIGHT SIDE BUTTONS (List Home + Hamburger/Profile) ---- */}
                 <div className='ham'>
-                    <button id='btn1'>List Your Home</button>
+                    <Link to={"/Listing"}>
+                        <button id='btn1'>List Your Home</button>
+                    </Link>
                     <button id='btn2' onClick={() => setvisible(prev => !prev)}>
                         <GiHamburgerMenu id='svg1' />
                         <CgProfile id='svg2' />
