@@ -34,7 +34,9 @@ const Navbar = () => {
                     <Link to={"/Listing"}>
                         <div className="ham1">List your home</div>
                     </Link>
-                    <div className="ham1">Help center</div>
+                    <Link to={"/Help Center"}>
+                        <div className="ham1">Help center</div>
+                    </Link>
                 </div>
             ) : null}
 

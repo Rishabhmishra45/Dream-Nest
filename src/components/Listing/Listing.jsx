@@ -40,7 +40,7 @@ const Listing = () => {
 
                 <div className="list">
                     <label htmlFor="location">Location</label>
-                    <input placeholder='City/Country' type="text" id='location' required />
+                    <input placeholder='City/Country' type="text" id='location' />
                 </div>
 
                 <button id="addbtn" type="submit">

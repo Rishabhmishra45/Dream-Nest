@@ -5,7 +5,7 @@ import { LuUserRoundPlus } from "react-icons/lu";
 const Signup = () => {
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     alert("Sign Up Successfully...");
   };
 
@@ -15,22 +15,22 @@ const Signup = () => {
         <span id='signuptitle'>SignUp Page</span>
 
         <div className="list">
-          <label htmlFor="fullname">Full Name</label>
+          <label htmlFor="fullname"><span>Full Name</span></label>
           <input type="text" id='fullname' required />
         </div>
 
         <div className="list">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email"><span>Email</span></label>
           <input type="email" id='email' required />
         </div>
 
         <div className="list">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password"><span>Password</span></label>
           <input type="password" id='password' required />
         </div>
 
         <div className="list">
-          <label htmlFor="confirmPass">Confirm Password</label>
+          <label htmlFor="confirmPass"><span>Confirm Password</span></label>
           <input type="password" id='confirmPass' required />
         </div>
 

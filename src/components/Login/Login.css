@@ -20,12 +20,12 @@
     background: #fff;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 #logintitle {
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 700;
     color: black;
     margin-bottom: 20px;
     text-align: center;
@@ -90,6 +90,7 @@
     #login form {
         width: 80%;
     }
+
     #logintitle {
         font-size: 32px;
     }
@@ -101,9 +102,11 @@
         width: 90%;
         padding: 25px;
     }
+
     #logintitle {
         font-size: 28px;
     }
+
     #login .list label {
         font-size: 16px;
     }
@@ -115,20 +118,25 @@
         min-height: 85vh;
         padding: 10px;
     }
+
     #login form {
         width: 100%;
         padding: 20px;
     }
+
     #logintitle {
         font-size: 24px;
     }
+
     #login .list label {
         font-size: 15px;
     }
+
     #login .list input {
         font-size: 14px;
         padding: 8px;
     }
+
     #loginbtn {
         width: 100%;
         font-size: 16px;
